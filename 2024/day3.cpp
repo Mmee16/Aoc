@@ -60,7 +60,7 @@ int get_sum(string line, bool eval) {
     return get_mul(temp);
 
 }
-int main() {
+void evaluate_day6() {
     static bool eval = true;
     int sum=0;
     fstream file;
