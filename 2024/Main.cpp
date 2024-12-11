@@ -1,8 +1,9 @@
+#include <iostream>
 #include <string>
 #include <fstream>
 #include <vector>
 #include "Util.cpp"
-#include "day2.cpp"
+#include "day4.cpp"
 using namespace std;
 
 vector<int> read_line(string line) {
@@ -17,12 +18,12 @@ vector<int> read_line(string line) {
 
 int main() {
     fstream file;
-    file.open("day2inp.txt");
+    file.open("day4inp.txt");
     string line;
     vector<vector<int>> data;
     while(getline(file, line)) {
-        data.push_back(read_line(line));
+        insert_row(line);
     }
+    cout<<count2();
     
-    cout<<NumSafeReportsWithProblemDampener(data);
 }
